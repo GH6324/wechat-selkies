@@ -14,7 +14,8 @@ services:
       - "3001:3001"       # https port
     restart: unless-stopped
     environment:
-      - PUID=1000
-      - PGID=100
+      - PUID=1000         # set user id according to your system
+      - PGID=100          # set group id according to your system
       # - CUSTOM_USER=<Your Name>   # recommended to set a custom user name
       # - PASSWORD=<Your Password>  # recommended to set a password for selkies web ui
+    shm_size: "1gb"       # recommended, will improve performance
