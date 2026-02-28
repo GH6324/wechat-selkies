@@ -158,6 +158,19 @@ Configure the following environment variables in `docker-compose.yml`:
 
 > **Note:** If the right-click menu lacks `WeChat` related options after an upgrade, please clear the `openbox` directory in the local mounted directory (e.g., `./config/.config/openbox`).
 
+## Installing Third-Party Applications (e.g., Telegram)
+
+This project supports installing third-party Linux applications via [proot-apps](https://github.com/linuxserver/proot-apps). Here's how to install Telegram as an example:
+
+1. Open the container desktop in your browser
+2. Click the **Sidebar** on the left → **Applications**
+3. Find **Telegram** in the application list
+4. Click the **Install** button and wait for the installation to complete
+
+Once installed, the application shortcut will automatically appear in the `~/Desktop/` directory, and the **right-click menu will auto-refresh** — no container restart needed to launch the app from the menu.
+
+> **Tip:** To uninstall an application, go to Sidebar → Applications, select the app, and click **Uninstall**. The right-click menu will update automatically.
+
 ## Advanced Configuration
 
 ### Hardware Acceleration

@@ -160,6 +160,19 @@ docker run -it -p 3001:3001 -v ./config:/config --device /dev/dri:/dev/dri nickr
 
 > **注意：** 如果升级后右键菜单缺少 `WeChat` 相关选项，请先清空本地挂载目录下的openbox目录(如`./config/.config/openbox`)。
 
+## 安装第三方应用（如 Telegram）
+
+本项目支持通过 [proot-apps](https://github.com/linuxserver/proot-apps) 安装第三方 Linux 应用。以 Telegram 为例：
+
+1. 在浏览器中打开容器桌面
+2. 点击左侧 **侧边栏** → **应用程序**（Applications）
+3. 在应用列表中找到 **Telegram**
+4. 点击 **安装**（Install）按钮，等待安装完成
+
+安装完成后，应用快捷方式会自动出现在 `~/Desktop/` 目录下，**右键菜单会自动刷新**，无需重启容器即可从菜单中启动该应用。
+
+> **提示：** 如需卸载应用，同样通过侧边栏 → 应用程序，选中对应应用后点击 **卸载**（Uninstall）即可，右键菜单会自动更新。
+
 ## 高级配置
 
 ### 硬件加速
